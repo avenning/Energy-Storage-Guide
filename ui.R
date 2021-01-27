@@ -4850,7 +4850,7 @@ shinyUI(fluidPage(
                             tags$li("Do you have solar panels or some other renewable generation resource?"),
                             tags$li("What is the emission profile of your utility's mix of generation resources?"),
                             tags$li("Will the storage device replace a fossil fuel-powered resource such as a backup generator?")
-                            ),1ed1``
+                            ),
                             hr(),
                         p(class = "body-text",
                             "Determining the effect of energy storage use on greenhouse gas emissions is not straightforward and", strong("depends on how the
