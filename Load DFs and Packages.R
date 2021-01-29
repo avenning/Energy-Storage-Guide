@@ -1,6 +1,5 @@
 ############### LOAD PACKAGES AND DATAFRAMES
 
-library(tidyverse)
 library(shiny)
 library(shinyjs)
 library(lubridate)
@@ -10,6 +9,7 @@ library(flextable)
 library(shinyWidgets)
 library(officer)
 library(hms)
+library(tidyverse)
 
 
 ################# Load DFs

@@ -12,7 +12,7 @@ shinyUI(fluidPage(
     shinyjs::useShinyjs(), # Call to activate shinyJS package.
     
   {tags$header(
-      tags$h2(class = "page-title", "Minnesota Community-Scale Energy Storage Guide"),
+      tags$h2(class = "page-title", style = "width:1000px;", "Minnesota Community-Scale Energy Storage Guide"),
     
       tags$div(class = "topnav",
         tags$a(style = "padding: 0px;",
@@ -4896,18 +4896,71 @@ shinyUI(fluidPage(
                     hr(),
                     p(class = "body-text indent",
                         "The type of storage device employed can have significant impact on its ability to perform the selected use case and to fulfill its intended purpose.
-                        For a detailed description of several storage technologies, see the 'Energy Storage Technologies' page under the 'Introduction' tab."),
+                        For a detailed description of several storage technologies, see the", 
+                        strong(style = "font-style:italic;", "Energy Storage Technologies"),
+                        "page under the",
+                        strong(style = "font-style:italic;", "Introduction"), "tab."),
+                    p(class = "section-subheader", "Battery Type Selection"),
                     p(class = "body-text indent",
                         "Often, the most cost-effective investment in energy storage is in the improvement of building envelope insulation. More efficient thermal storage
                         in a building reduces energy use for heating and cooling, corresponding to lower carbon and other pollutant emissions. Energy use is typically avoided
                         during times of high energy demand, such as summer afternoons when most buildings are running air conditioning equipment. This provides value by reducing
                         a building's peak energy use and its contribution to system-wide peak load events, since energy use reduction is typically greatest during times of high 
                         energy demand."),
+                    div(class = "float-right", style = "padding: 10px; height: 540px; width: 420px;",
+                        strong(style = "padding: 0 8px;", "Relative pros and cons of common battery chemistries:"),
+                        tags$img(src = "BattComp.png", height = "500px", width = "400px")
+                    ),
                     p(class = "body-text indent",
                         "For more active energy storage applications achievable for community-scale or residential customers, the most commonly used energy storage technology in
-                        residential and community-scale applications is electrochemical battery energy storage systems. Within this category, there are several different options
-                        applicable to each scale and purpose of installation, with more added as novel battery chemistries are developed."),
-                    tags$img(src = "BattComp.png", height = "500px", width = "400px")
+                        residential and community-scale applications is electrochemical battery energy storage systems. Selection of a particular battery chemistry can come down 
+                        to a number of factors. Lead acid batteries are by far the least expensive option, but may require ongoing monitoring to ensure optimal function, and may 
+                        need to be replaced after a few years of use. If funds available for an energy storage project are limited, or the device is only needed or wanted for a few 
+                        years, then lead acid may be a good choice - particular one of the newer “advanced” lead acid battery designs. Additionally, if circular material flow and 
+                        recyclability are significant concerns for you or your organization, lead-acid has a long history of recycling and reuse of battery materials. Lead acid batteries 
+                        have long been used for off-grid operation or emergency backup power and would also fit well with an application that does not require frequent cycling or deep 
+                        discharging, such as demand-charge management, potentially extending the battery’s useful life."),
+                    p(class = "body-text indent",
+                        "Lithium ion technology is currently the most common battery chemistry for stationary energy storage installations. This can be attributed to its advantageous mix 
+                        of modest cost, high energy density (small footprint), and moderately long functional life. These balanced properties make lithium ion batteries suited to a wide 
+                        range of use cases and applications, including all four described herein. Continued research and development in the electric vehicle industry have greatly contributed 
+                        to the declining costs of lithium ion batteries and are expected to continue to drive lower costs and improved performance."),
+                    p(class = "body-text indent",
+                        "Redox flow batteries are a much newer technology than others in widespread use. As such, they make up a much smaller share of the energy storage market and typically 
+                        have higher costs per unit of battery capacity. One particular advantage of flow batteries is the ability to select the power and energy capacities independently of 
+                        each other. This enables batteries of longer duration than other technologies can typically achieve, which makes flow batteries advantageous for application in cases 
+                        which benefit from long duration storage, such as integration of distributed renewable generation resources, backup power, or time-of use management.
+                      "),
+                    p(class = "section-subheader", "Determination of Battery Capacity"),
+                    p(class = "body-text indent",
+                      "In addition to the selection of battery chemistry, determining an appropriate battery capacity to meet the requirements of the selected use case(s) is critical in achieving 
+                      the objectives of the storage application in an efficient, cost-effective manner. A device which is sized too small would be unable to provide the level of services necessary 
+                      to meet project goals; meanwhile, one that is too large would be more expensive than necessary and likely would not generate the value necessary to offset the capital expense 
+                      of the installation."),
+                    div(class = "float-left", style = "float: left; width: 360px; height: 550px;",
+                        strong(style = "margin: 0 60px;", "Marginal Value Estimation Analysis"),
+                        tags$img(src = "BattCap.png", width = "360px", height = "530px")),
+                    p(class = "body-text indent",
+                      "Additionally, the ratio of power capacity to energy capacity can greatly influence the effectiveness of the battery in executing a particular use case. The figure to the left depicts a 
+                      value estimation analysis of a theoretical battery engaged in demand-charge management on a particular load curve. The shade of each colored tile represents the relative 
+                      marginal value for each added unit of battery capacity. Darker shades represent greater marginal value for each additional unit, while the black dashed lines represents fixed battery
+                      durations or the ratio of power and energy capacity."),
+                    div(style = "width: 400px; margin: -10px 500px -2px;", 
+                        p(style = "font-size: 13px; font-style: italic", "Duration  =  Energy Capacity / Power Capacity")
+                    ),
+                    p(class = "body-text indent",
+                      "The grey region of the plot represents 
+                      ranges of power to energy ratios in which additional units of either power or energy capacity represent no added value. The shape of this plot is highly dependent on the 
+                      characteristics of each individual load curve and on the use case being applied. Based on these factors, it is crucial to select a battery with characteristics that suit 
+                      the particular application by achieving proper balance and magnitude of these specifications for efficient provision of the chosen services. Most vendors of energy storage 
+                      devices or battery management systems are able to provide detailed analysis to assist in the selection of a use case or use cases and to size a battery storage system 
+                      appropriately to maximize the potential value of the installation."),
+                    p(class = "body-text indent",
+                      "Batteries which are intended to optimize solar generation should be sized with consideration for the size of the solar array and the typical amount of energy that is 
+                      generated in excess of building demand. If the battery is intended to charge only from the solar array, any energy over and above the expected exvess generation is unlikely 
+                      to be used. Likewise, power capacity should be determined with an eye toward the largest amount of overgeneration expected, in order to ensure that the battery can use as much 
+                      overgenerated electricity as possible, rather than exporting it to the grid.")
+                    
                 )
             )}, # Tech and Capacity
             {hidden(
