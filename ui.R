@@ -4964,31 +4964,138 @@ shinyUI(fluidPage(
                 )
             )}, # Tech and Capacity
             {hidden(
-                div(class = "column main guidebook", id = "Guide-3",
+                div(class = "column main guidebook", id = "Guide-3", style = "min-width:950px; max-width:950px;",
                     p(class = "section-header", 
                         "Auxiliary Equipment Requirements and Considerations"),
-                    hr()
+                    hr(),
+                    p(class = "body-text indent",
+                      "In addition to the battery or other storage device itself, there are a few additional requirements for the device to function properly. Selection of these 
+                      components can have profound effects on the overall performance of the storage device. These auxiliary equipment requirements include the following:"),
+                    hr(),
+                    p(class = "section-subheader", 
+                      "Power Inverter"),
+                    p(class = "body-text indent",
+                      "In addition to a battery management system, battery devices typically need to be connected through a power inverter to function. Load centers such as homes 
+                      and businesses operate on AC power, while batteries use DC power to charge and discharge. An inverter converts between these two formats, allowing power to 
+                      flow back and forth. Batteries typically do not include an inverter, and a compatible device must be purchased separately. Some systems, typically designed 
+                      for small, residential installations, do come with built-in inverters. (Tesla’s Powerwall has a built-in inverter while the LG Chem RESU battery does not.)"),
+                    p(class = "body-text indent",
+                      "If the energy storage device is paired with a generation resource such as solar photovoltaic, the storage device can often be installed in one of two general 
+                      ways: DC-coupled or AC-coupled. When AC-coupled, the battery storage device and the generation resource are each connected to an inverter to convert output to 
+                      AC, before joining the two and connecting to the targeted source of load. DC-coupled devices on the other hand, are connected while still in DC 
+                      state, before passing through an inverter to the building load. While AC-coupled systems allow more versatility in terms of placement of the storage 
+                      and generation devices, DC coupled systems tend to be more efficient as they have less energy loss from electricity passing through inverters."),
+                    tags$img(style = "margin-left: 80px;", src = "ACDC_Coupling.png", height = "275px", width = "782px"),
+                    hr(),
+                    p(class = "section-subheader", 
+                      "Battery Management System (BMS)"),
+                    p(class = "body-text indent",
+                      "Batteries typically contain basic control systems which maintain key measurements and processes of the device within a safe operating range, preventing it from 
+                      inflicting damage on itself through overcharging, overheating, or some other detrimental behavior. However, these systems usually are not designed to operate 
+                      the storage device in the execution of any particular use case. A BMS is required to interface with the load and/or generation resource to enable use case 
+                      execution. Some batteries (typically residential, such as the Tesla Powerwall) are purchased and installed with a BMS as part of the product package, while 
+                      others require the purchase of a compatible management device. The BMS is in many ways the most important piece of an energy storage installation because 
+                      without it, the device is unable to provide the desired services."),
+                    tags$img(style = "margin-left: 150px;", src = "BMS.png", height = "300px", width = "600px"),
+                    hr(),
+                    p(class = "section-subheader", 
+                      "Fire Safety Equipment")
                 )
             )}, # Auxiliary Equipment
             {hidden(
-                div(class = "column main guidebook", id = "Guide-4",
+                div(class = "column main guidebook", id = "Guide-4", style = "min-width:950px; max-width:950px;",
                     p(class = "section-header", 
                         "Warranty Availability and Considerations"),
-                    hr()
+                    hr(),
+                    p(class = "body-text indent",
+                      "There are a number of different warranty and insurance options available from battery manufacturers to ensure battery storage devices operate properly for as 
+                      long as possible. The simplest form is a", strong("product warranty,"), "which guarantees repairs in the event of defects in the device. There are also", strong("performance warranties,"), " 
+                      which ensures that one or more of the four key attributes (energy and power capacity, availability, and round-trip efficiency) maintain certain levels of 
+                      performance over time (i.e. 70 percent of the original capacity). Finally, there may also be an option of an", strong("energy throughput warranty,"), "which guarantees that 
+                      the storage device delivers or discharges a certain amount of energy over the product’s lifespan."),
+                    p(class = "body-text indent",
+                      "Depending on the specifics of the storage system and the warranty options available, manufacturers may offer self-insurance, where the company itself bears the 
+                      risks of the warranty they have offered. Manufacturers may also oversize the battery relative to the capacity specified in the sale. For example, a battery sold 
+                      with 100 kilowatt-hours of nominal capacity may be built with 110 kilowatt-hours of actual capacity, so that as the battery experiences degradation over time, 
+                      the apparent degradation relative to the nominal, purchased capacity appears less significant than the actual capacity degradation. This practice reduces the 
+                      level of risk for performance and throughput warranties. Warranties are often contingent on certain battery use stipulations, such as use case(s) and/or 
+                      cycle limits per day, month, or year. These conditions are often set because the frequency and depth of cycling, which can vary significantly depending on the 
+                      use case(s) employed, have a significant impact on the degradation rate of battery capacities.")
                 )
             )}, # Warranties Available
             {hidden(
-                div(class = "column main guidebook", id = "Guide-5",
+                div(class = "column main guidebook", id = "Guide-5", style = "min-width:950px; max-width:950px;",
                     p(class = "section-header", 
                         "Financing Options and Challenges"),
-                    hr()
+                    hr(),
+                    p(class = "body-text indent",
+                      "Historically, developers and other purchasers of energy storage devices have relied on upfront self-funding of projects or captive lending arrangements with 
+                      manufacturers to finance them. Banks and other lending institutions are typically hesitant to fund storage installations. They are unfamiliar with the 
+                      technology and it has yet to establish a consistent record of cost-recovery and profitability. This is slowly changing with advances in modeling capabilities 
+                      and an expanding record of implementation; however, this is largely on a large commercial or utility scale. Community-scale, small commercial, and residential 
+                      energy storage have a far less extensive track record and often face challenges to cost-recovery, such as market access, rate design, economies of scale, and 
+                      volatile tariff structures."),
+                    p(class = "body-text indent",
+                      "Furthermore, the availability of financing is highly dependent on the use case(s) employed by the device. At this point in time, due in part to limited value 
+                      streams, demand-charge management is the primary means for cost-recovery among commercial installations and the main justification for approval of financing. 
+                      This justification is strongest when demand charges are high, improving the ability to save money, which improves one’s ability to finance the installation. 
+                      Storage installations for other uses such as backup power and resiliency, or in load centers with low demand charges or peak-hour consumption rates may have 
+                      challenges securing financing for an energy storage installation."),
+                    hr(),
+                    p(class = "section-subheader", "Available Tax Incentives"),
+                    p(class = "body-text indent",
+                      "Under current law, there are generally two incentive mechanisms for energy storage installations. These include the federal Investment Tax Credit (ITC) 
+                      and Modified Accelerated Cost Recovery System (MACRS). The ITC is typically used for renewable generation resources such as solar panels and allows owners 
+                      to deduct a portion of the cost from their taxes. Up to 2019, this deduction was set at 30 percent, but this declined to 26 percent in 2020, 22 percent 
+                      in 2021, and will drop to 10 percent from 2022 onward (for non-residential installations). If an energy storage device is charged with renewable energy from a 
+                      solar array or other renewable generation resource, it may be eligible for the same ITC rebate amount. Energy Storage systems which are charged 75 percent 
+                      or more from renewable resources are eligible for a portion of the full ITC equal to the fraction of renewable energy that they use."),
+                    p(class = "body-text indent",
+                      "While securing the ITC can represent significant savings on a costly storage system, committing to charge from solar generation has the potential to complicate 
+                      the execution of certain use cases. For example, if a battery system is engaged in demand-charge management but experiences an extended period of dense cloud 
+                      cover during key times, it may miss a peak that it is mean to be shaving, missing out on the savings that the battery is meant to be delivering. For this 
+                      reason, some owners eschew the ITC altogether to focus on use case execution."),
+                    p(class = "body-text indent",
+                      "Energy storage devices both paired with and in the absence of renewable generation resources are eligible for MACRS unless they are owned by a public 
+                      institution or other non-profit organization. This accounting mechanism allows owners to recover some of the capital cost of the device over time. Systems 
+                      eligible for the ITC may employ a 5-year MACRS schedule, equivalent to savings of approximately 21 percent of the cost of the system. Those which are ineligible 
+                      for the ITC can qualify for a 7-year MACRS timeframe, corresponding to 20 percent savings over those seven years.")
                 )
             )}, # Financing Options
             {hidden(
-                div(class = "column main guidebook", id = "Guide-6",
+                div(class = "column main guidebook", id = "Guide-6", style = "min-width:950px; max-width:950px;",
                     p(class = "section-header", 
                         "Operations and Maintenance Costs and Considerations"),
-                    hr()
+                    hr(),
+                    p(class = "body-text indent",
+                      "As with modeling and use case selection, operation and maintenance is much more complex for energy storage systems than it is for solar photovoltaic arrays. 
+                      There are several reasons that contribute to this trend. First, storage devices are very complex systems with many moving parts. Maintenance involves the 
+                      management of electrical, electromechanical, electrochemical, and thermal systems. Depending on battery chemistry and scale, maintenance may involve monitoring 
+                      fluid levels, chemical concentrations, hosing and pump manifolds, and/or fire suppression systems. Additionally, control systems, firmware, and software are 
+                      more complex because storage systems have more complex operational needs than solar arrays, which are designed primarily to convert light into electrical energy 
+                      in the most efficient way possible."),
+                    p(class = "body-text indent",
+                      "Furthermore, the repercussions of maintenance practices vary between the two technologies. Poor maintenance may cause solar PV systems to lose efficiency or 
+                      generation capacity. Often, any damage or detriment incurred from poor maintenance practices can be fixed by subsequent repairs or the replacement of a panel. 
+                      On the other hand, poor maintenance of battery systems, especially lithium ion batteries, can lead to chemical leaks and contamination or thermal runaway events, 
+                      which can either destroy the battery altogether or render it unable to function."),
+                    hr(),
+                    p(class = "section-subheader",
+                      "Vendor-Performed Maintenance and Self-Maintenance Options"),
+                    p(class = "body-text indent",
+                      "Most vendors offer service contracts along with their battery systems in which they will send an employee or authorized representative to perform periodic 
+                      maintenance of the battery system. This typically includes routine maintenance such as monitoring key systems like those described above, replacing equipment 
+                      such as pumps when they reach the end of their service lifespan, and checking for malfunctioning equipment. Depending on the location of the battery device 
+                      and the capabilities of the vendor, service contracts may cost around 1 to 3 percent of the total capital cost on a yearly basis. If this routine service 
+                      discovers a problem with the battery that is covered by the warranty, the vendor will fix it at their expense, and if the problem is not covered under the 
+                      warranty or if the warranty has expired, the vendor will fix it and bill the device’s owner."),
+                    p(class = "body-text indent",
+                      "Depending on the battery technology used, many of the available vendors are relatively small organizations and have limited capacity for on-site maintenance, 
+                      particularly for small- to medium-scale installations. For this reason, vendors may offer self-maintenance options. When the vendor is on-site during battery 
+                      installation, they can train employees or members of the host site to do much of the basic, routine maintenance. If a larger issue arises that may need more 
+                      specialized attention, the vendor can come to the site to do incidental maintenance, but the majority of the regular maintenance can be done in-house by the 
+                      host site. This may be of particular interest or relevance to battery owners or hosts with an educational interest or mission or with particular skill with 
+                      electrical equipment, such as job training facilities, educational institutions, or certain industrial businesses.")
                 )
             )}  # O & M Costs
         )
