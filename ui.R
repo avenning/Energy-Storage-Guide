@@ -4999,7 +4999,21 @@ shinyUI(fluidPage(
                     tags$img(style = "margin-left: 150px;", src = "BMS.png", height = "300px", width = "600px"),
                     hr(),
                     p(class = "section-subheader", 
-                      "Fire Safety Equipment")
+                      "Fire Safety Equipment"),
+                    p(class = "body-text indent",
+                      "Unfortunately, lithium ion batteries can be extremely flammable, due to the flammability of the lithium material and the high concentration of energy stored in
+                      the cell. This combination has led to a range of outcomes from cell phone batteries burning up to utility-scale battery systems producing violent explosions.
+                      However, these risks can be effectively mitigated using proper fire prevention strategies. These strategies typically entail four key aspects:", 
+                      strong("Failure Prevention, Fire Detection, Fire Suppression, and Compartmentation.")),
+                    p(class = "body-text indent",
+                      "Fire prevention is simply the process of designing the battery cell to minimize the risk of thermal runaway events that are often the cause of overheating
+                      and fires. During the information gathering stage of purchasing a lithium ion battery it is important to ask potential vendors about design and construction
+                      features that serve as fire prevention measures. Fire detection involves rapid recognition of conditions that could lead to fires or the early stages of a fire.
+                      The nature of thermal runaway events is that they escalate extremely rapidly as one exothermic reaction creates heat which accelerates another exothermic reaction,
+                      which continues this cycle to disastrous effect. Early detection of these events is critical in minimizing risk of severe fires and explosions. Fire suppression
+                      systems receive signals from detection systems and respond quickly to cool the battery and suppress the fire if it exists. Water mist is a common way to achieve
+                      both of these aims. Finally, compartmentation is the design aspect of the battery that seals off each of the individual cells from each other so that if one cell
+                      catches fire, it will not spread rapidly to each of the other cells in the unit.")
                 )
             )}, # Auxiliary Equipment
             {hidden(

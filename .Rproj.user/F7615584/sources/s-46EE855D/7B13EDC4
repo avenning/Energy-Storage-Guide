@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1611768445183.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "30|1|69|0|\n",
+    "hash" : "0",
+    "id" : "7B13EDC4",
+    "lastKnownWriteTime" : 1611869468,
+    "last_content_update" : 1611869468622,
+    "path" : "~/Desktop/Community_Energy_Storage_Guide/LCCMR-Energy-Storage-Guide/Load DFs and Packages.R",
+    "project_path" : "Load DFs and Packages.R",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
