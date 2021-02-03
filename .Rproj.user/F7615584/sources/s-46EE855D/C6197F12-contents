@@ -168,8 +168,244 @@ shinyUI(fluidPage(
           div(class = "column main intropage", id = "Intro-2", style = "padding-left:30px;",
               p(class = "section-header", 
                 "Energy Storage Glossary"),
-              #hr(),
               {div(class = "row", style = "width:950px; border-top:1px solid black; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Anode")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Negative electrode in an electrochemical cell where electrons accumulate when in the charged state. The anode
+                         expels electrons towards the load and cathode during discharge and accepts electrons when charging.")
+                       )
+                   )}, # Anode
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Anolyte / Catholyte")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "In flow batteries, the structure of the electrochemical cell is quite different than other battery types. Rather than solid
+                         electrodes, the energy in flow batteries is stored in liquid electrolyte solutions, an anolyte and a catholyte, which are
+                         stored separately in tanks. Analogous to other battery types, electrons flow from anolyte to catholyte during discharge, and
+                         are reversed when charging.")
+                       )
+                       )}, # Anolyte / Catholyte
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Availability")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The state of a storage device being ready and capable of performing a service or use case. If a battery only charges from an attached 
+                         solar array, then its availability depends on the array’s ability to charge the device.")
+                       )
+                   )}, # Availability
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Cathode")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Positive electrode in an electrochemical cell which accumulates positive charge when in the charged state. The cathode loses
+                         electrons during charges and accepts them during discharge.")
+                       )
+                   )}, # Cathode
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Criteria Pollutant(s)")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Under the Clean Air Act, the EPA regulates air quality standards for six common air pollutants known as criteria air pollutants. These include ozone, carbon monoxide,
+                         sulfur dioxide, nitrogen dioxide, lead, and particulate matter. Each of these pollutants can be formed and released from combustion of electricity generation resources, 
+                         such as coal, natural gas, and biomass materials. EPA regulations affect how utilities are able to operate these generation facilities.")
+                       )
+                       )}, # Criteria Pollutants
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Cycle Life")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Over time, a battery’s ability to charge and discharge will slowly diminish. Cycle life refers 
+                         to the rate at which this occurs with respect to the number of times the device charges and
+                         discharges. A battery with a long cycle life can undergo many charge-discharge cycles with 
+                         low degradation of its capacity. Storage devices often include a warrantee from their manufacturer 
+                         which specifies a time period and a capacity. This warrantee guarantees that the device will maintain 
+                         at least the stated capacity (often around 70%) for the designated time.")
+                       )
+                       )}, # Cycle Life
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Dendrites")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Dendrites are crystals that develop in a highly-branched, tree-like form. In the context of energy storage, dendrites form in lithium ion batteries
+                         lithium is electroplated onto the electrode in an uneven fashion and forms these branching crystals that can span across the gap between the two electrodes.
+                         Dendrites can have negative impacts on the function and useful life of a battery, and can even cause safety hazards, such as fires or explosions.")
+                       )
+                       )}, # Dendrite Formation
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Depth of Discharge")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;",
+                         "Most batteries have to maintain some minimal level of charge at all times to avoid long-term damage 
+                         or decreased capacity. The Depth of Discharge refers to the amount of the battery’s energy capacity 
+                         that has been used. Each battery typically has a maximum depth of discharge, which is the fraction 
+                         of energy that can be drawn from the battery without depleting its minimum charge.")
+                       )
+                       )}, # Depth of Discharge
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Dispatchable Generation")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;",
+                         "Generation resources that can be deployed (or ramped up) as needed to meet demand. Non-dispatchable resources are those which 
+                         cannot be controlled such as wind and solar, which generate power according to weather conditions.")
+                       )
+                       )}, # Dispatchable Generation
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Duration")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The length of time a storage device can provide 100% power delivery, typically measured in hours. A device with 
+                         one kilowatt of rated power and two kilowatt-hours of energy capacity has a duration of two hours.")
+                       )
+                   )}, # Duration
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Electrochemical Cell")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Electrochemical cells are the fundamental structure of all battery energy storage devices. Most cells consist of two
+                         electrodes, a negatively charged anode and a positive cathode, separated by an electrolyte and/or a semi-permeable
+                         barrier. When discharging, an energetically favored chemical reaction drives electrons across a circuit between the 
+                         anode and the cathode. While charging an external voltage is applied to reverse the flow of electrons and thereby
+                         reverse the chemical reaction.")
+                       )
+                       )}, # Electrochemical Cell
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Electrolyte")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;",
+                         "Conventionally, electrolytes are electricially conductive solutions of salt compounds in water. Electrons typically
+                         cannot pass through the electrolyte alone, however, which facilitates current flow between the anode and the cathode.
+                         Modern innovations include gel or solid-phase electrolytes in addition to liquid phase.")
+                       )
+                       )}, # Electrolyte
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Energy Density / Power Density")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Energy and power density are measurements of energy capacity and power rating per unit of mass of the storage
+                         device. Typically measured in watt-hours per kilogram (Wh/kg) and watts per kilogram (W/kg) respectively.")
+                       )
+                   )}, # Energy and Power Density
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Energy Capacity")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The total amount of energy that an energy storage device is capable of storing. Measured in kilowatt-hours (kWh).")
+                   )
+              )}, # Energy Capacity
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Frequency")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Refers to the frequency of the oscillations of alternating current (AC) electricity. In the United States the standard frequency is 
+                         60Hz. Significant deviation away from this value can result in damage to electrical equipment or interruptions to electrical service.")
+                   )
+              )}, # Frequency
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Grid Flexibility")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The ability to maintain the proper balance between generation and load, typically by leveraging control over both the generation 
+                         and load sides of the equation. This can be achieved through energy storage, demand side management, and dispatchable generation resources.")
+                       )
+                   )}, # Grid Flexibility
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Independent System Operator (ISO) /", br(), "Regional Transmission Operator (RTO)")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "ISOs and RTOs are independent organizations that control and monitor the transmission grid across a large area, encompassing multiple electric utilities. They coordinate between
+                         their constituent utilities to efficiency and reliability of the grid without direct government control or oversight.")
+                       )
+                   )}, # Independent System Operator
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "In Front of / Behind the Meter")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The location relative to 'the meter' refers to the meters measuring electricity consumption at customers' homes and businesses. Typically, the utility owns
+                         and is responsible for everything in front of the meter, or before electricity reaches the customer, while the customer owns and is responsible for everything 
+                         behind the meter, or after electricity has entered the home or business.")
+                       )
+                       )}, # In Front of / Behind the Meter
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Investment Tax Credit (ITC)")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The Investment Tax Credit is a federal tax incentive available to owners of wind and solar assets. Energy storage is eligible for the ITC 
+                         if it is solar-paired and charges from that solar array at least 70 percent of the time. The ITC was set at 30 percent until 2019, when it 
+                         began to be phased out. In 2020, the ITC decreased to 26 percent. In 2021 it will be 22 percent, while in 2022, the ITC will be 10 for commercial 
+                         and utility-scale installations and will not be available to residential customers.")
+                       )
+                   )}, # Investment Tax Credit
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Investor-Owned Utility (IOU)")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "A publicly-owned, corporate, for-profit utility company. In vertically-integrated states such as Minnesota, IOUs are granted monopolies 
+                         over their respective service territories, but they are required to provide service to all customers in that territory and are regulated 
+                         by state regulatory agencies (i.e. Minnesota Public Utilities Commission).")
+                       )
+                       )}, # Investor-Owned Utility
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
                    div(style = "height:100%; width:350px;",
                        tags$li(style = "size:16px; font-weight:bold;", 
                                "Load Curve")
@@ -179,18 +415,62 @@ shinyUI(fluidPage(
                          "A load curve depicts the amount of power that an entity (from a single customer up to an entire regional grid) is using across a certain time frame.
                          Load curves are often considered in daily segments since they often are highly time-of-day dependent, but can also be viewed in terms of average energy
                          use throughout the day.")
-                   )
-              )}, # Load Curve
+                       )
+                       )}, # Load Curve
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Energy Capacity")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "The total amount of energy that an energy storage device is capable of storing. Measured in kilowatt-hours (kWh).")
-                  )
-              )}, # Energy Capacity
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "MACRS")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The Modified Accelerated Cost Recovery System depreciation deduction is a tax incentive available to non-public owners of energy storage 
+                         devices. The type of MACRS available depands on whether the storage device is paired with a solar photovoltaic array. Installations that 
+                         are solar-paired and charge from that solar more than 70 percent of the time are eligible for a 5-year MACRS schedule, which is roughly 
+                         equivalent to a 21 percent reduction of capital costs. All other privately-owned storage systems qualify for 7-year MACRS schedules, roughly 
+                         equivalent to a 20 percent reduction in capital costs.")
+                       )
+                       )}, # MACRS
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "MISO")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The Midcontinent Idependent System Operator, or MISO, is the regional transmission organization that encompasses Minnesota and much of the midwest as well as parts of
+                         the south central region of the US. It is divided into three regions: North, Central, and South. The MISO North Region includes Minnseota, Iowa, parts of the Dakotas, and
+                         the province of Manitoba, and has its regional control center in Eagan, Minnesota.")
+                       )
+                       )}, # MISO
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Operating Reserve")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The energy capacity (generation or storage) available to a utility or system operator to meet demand if a generation asset is taken 
+                         offline or there is some other interruption in power supply. Two categories of operating reserve are spinning reserve and non-spinning 
+                         or supplemental reserve. Spinning reserve refers to generation assets that are operating at less than full capacity that can be increased 
+                         to full capacity. Supplemental reserve refers to generation assets that are not currently operational buct can be activated. Spinning 
+                         reserve can typically respond more rapidly than non-spinning reserve.")
+                       )
+                       )}, # Operating Reserve
+              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Round-Trip Efficiency")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "A perfectly efficient battery would be able to discharge one kWh for each kWh that it is charged. 
+                         However, each battery experiences energy losses in the charge-discharge cycle. The round-trip 
+                         efficiency is a measure of the fraction of energy that can be drawn out of a battery as a portion 
+                         of the energy that has been put into it. For example, a battery which is charged with 5 kWh, but 
+                         can only discharge 4 kWh has a round trip efficiency of 80%.")
+                       )
+                       )}, # Round-Trip Efficiency
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
                   div(style = "height:100%; width:350px;",
                       tags$li(style = "size:16px; font-weight:bold;", 
@@ -203,69 +483,27 @@ shinyUI(fluidPage(
                   )
               )}, # Power Rating
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Duration")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "The length of time a storage device can provide 100% power delivery, typically measured in hours. A device with 
-                          one kilowatt of rated power and two kilowatt-hours of energy capacity has a duration of two hours.")
-                  )
-              )}, # Duration
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Ramping/Ramp Rate")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "The process or rate of increasing power supply to the grid in order to match increasing demand. One of the most common examples is 
+                         the rapid increase in demand on hot summer evenings when distributed solar generation wanes and home energy use increases, creating a 
+                         rapid rise in demand.")
+                       )
+                   )}, # Ramping/Ramp Rate
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Round-Trip Efficiency")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                        "A perfectly efficient battery would be able to discharge one kWh for each kWh that it is charged. 
-                        However, each battery experiences energy losses in the charge-discharge cycle. The round-trip 
-                        efficiency is a measure of the fraction of energy that can be drawn out of a battery as a portion 
-                        of the energy that has been put into it. For example, a battery which is charged with 5 kWh, but 
-                        can only discharge 4 kWh has a round trip efficiency of 80%.")
-                  )
-              )}, # Round-Trip Efficiency
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Depth of Discharge")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;",
-                          "Most batteries have to maintain some minimal level of charge at all times to avoid long-term damage 
-                            or decreased capacity. The Depth of Discharge refers to the amount of the battery’s energy capacity 
-                          that has been used. Each battery typically has a maximum depth of discharge, which is the fraction 
-                          of energy that can be drawn from the battery without depleting its minimum charge.")
-                  )
-              )}, # Depth of Discharge
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Cycle Life")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Over time, a battery’s ability to charge and discharge will slowly diminish. Cycle life refers 
-                          to the rate at which this occurs with respect to the number of times the device charges and
-                          discharges. A battery with a long cycle life can undergo many charge-discharge cycles with 
-                          low degradation of its capacity. Storage devices often include a warrantee from their manufacturer 
-                          which specifies a time period and a capacity. This warrantee guarantees that the device will maintain 
-                          at least the stated capacity (often around 70%) for the designated time.")
-                  )
-              )}, # Cycle Life
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Energy Density / Power Density")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Energy and power density are measurements of energy capacity and power rating per unit of mass of the storage
-                          device. Typically measured in watt-hours per kilogram (Wh/kg) and watts per kilogram (W/kg) respectively.")
-                  )
-              )}, # Energy and Power Density
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "PV")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Photovoltaic, the most common method for solar panels to convert solar energy into electricity.")
+                       )
+                   )}, # PV - Photovoltaic
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
                   div(style = "height:100%; width:350px;",
                       tags$li(style = "size:16px; font-weight:bold;", 
@@ -280,66 +518,28 @@ shinyUI(fluidPage(
                   )
               )}, # Self-Discharge
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Electrochemical Cell")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Electrochemical cells are the fundamental structure of all battery energy storage devices. Most cells consist of two
-                          electrodes, a negatively charged anode and a positive cathode, separated by an electrolyte and/or a semi-permeable
-                          barrier. When discharging, an energetically favored chemical reaction drives electrons across a circuit between the 
-                          anode and the cathode. While charging an external voltage is applied to reverse the flow of electrons and thereby
-                          reverse the chemical reaction.")
-                  )
-              )}, # Electrochemical Cell
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Specific Energy/Power")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;", 
+                         "Similar to energy and power density, but measures battery capacity relative to the volume of the storage device.")
+                       )
+                       )}, # Specific Energy/Power
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Anode")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Negative electrode in an electrochemical cell where electrons accumulate when in the charged state. The anode
-                          expels electrons towards the load and cathode during discharge and accepts electrons when charging.")
-                  )
-              )}, # Anode
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Cathode")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Positive electrode in an electrochemical cell which accumulates positive charge when in the charged state. The cathode loses
-                          electrons during charges and accepts them during discharge.")
-                  )
-              )}, # Cathode
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Anolyte / Catholyte")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "In flow batteries, the structure of the electrochemical cell is quite different than other battery types. Rather than solid
-                          electrodes, the energy in flow batteries is stored in liquid electrolyte solutions, an anolyte and a catholyte, which are
-                          stored separately in tanks. Analogous to other battery types, electrons flow from anolyte to catholyte during discharge, and
-                          are reversed when charging.")
-                  )
-              )}, # Anolyte / Catholyte
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Electrolyte")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;",
-                          "Conventionally, electrolytes are electricially conductive solutions of salt compounds in water. Electrons typically
-                          cannot pass through the electrolyte alone, however, which facilitates current flow between the anode and the cathode.
-                          Modern innovations include gel or solid-phase electrolytes in addition to liquid phase.")
-                  )
-              )}, # Electrolyte
+                   div(style = "height:100%; width:350px;",
+                       tags$li(style = "size:16px; font-weight:bold;", 
+                               "Thermal Energy Storage")
+                   ),
+                   div(style = "height:100%; width:600px;",
+                       p(style = "size:14px;",
+                         "Storing energy in the form of a temperature difference between a storage medium and its surroundings. This can include storing warm or 
+                         cool air within a building, hot water heaters, cold water or ice, or hot molten salt. Thermal energy storage is often not converted back 
+                         to electricity, but rather is used for its heating or cooling abilities. Thermal storage allows for time-shifting, by heating or cooling 
+                         the medium when energy demand or rates are low and using it when rates are high.")
+                       )
+                       )}, # Thermal Energy Storage
               {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
                   div(style = "height:100%; width:350px;",
                       tags$li(style = "size:16px; font-weight:bold;", 
@@ -354,30 +554,7 @@ shinyUI(fluidPage(
                           thermal runaway, and often require extensive ventilation, climate control, and fire suppression systems for large installations.")
                   )
               )}, # Thermal Runaway
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Independent System Operator (ISO) /", br(), "Regional Transmission Operator (RTO)")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "ISOs and RTOs are independent organizations that control and monitor the transmission grid across a large area, encompassing multiple electric utilities. They coordinate between
-                          their constituent utilities to efficiency and reliability of the grid without direct government control or oversight.")
-                  )
-              )}, # Independent System Operator
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "MISO")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "The Midcontinent Idependent System Operator, or MISO, is the regional transmission organization that encompasses Minnesota and much of the midwest as well as parts of
-                          the south central region of the US. It is divided into three regions: North, Central, and South. The MISO North Region includes Minnseota, Iowa, parts of the Dakotas, and
-                          the province of Manitoba, and has its regional control center in Eagan, Minnesota.")
-                  )
-              )}, # MISO
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
+              {div(class = "row", style = "width:950px; border-bottom:1px solid black; padding:5px 5px 0 15px;",
                   div(style = "height:100%; width:350px;",
                       tags$li(style = "size:16px; font-weight:bold;", 
                           "Transmission and Distribution")
@@ -390,43 +567,7 @@ shinyUI(fluidPage(
                           area where it will be used, the voltage is stepped down at a substation and transmitted to homes and businesses through the lower-voltage 
                           distribution network.")
                   )
-              )}, # Transmission and Distribution
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Dendrites")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Dendrites are crystals that develop in a highly-branched, tree-like form. In the context of energy storage, dendrites form in lithium ion batteries
-                          lithium is electroplated onto the electrode in an uneven fashion and forms these branching crystals that can span across the gap between the two electrodes.
-                          Dendrites can have negative impacts on the function and useful life of a battery, and can even cause safety hazards, such as fires or explosions.")
-                  )
-              )}, # Dendrite Formation
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "In Front of / Behind the Meter")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "The location relative to 'the meter' refers to the meters measuring electricity consumption at customers' homes and businesses. Typically, the utility owns
-                          and is responsible for everything in front of the meter, or before electricity reaches the customer, while the customer owns and is responsible for everything 
-                          behind the meter, or after electricity has entered the home or business.")
-                  )
-              )}, # In Front of / Behind the Meter
-              {div(class = "row", style = "width:950px; border-bottom:1px dashed darkgrey; padding:5px 5px 0 15px;",
-                  div(style = "height:100%; width:350px;",
-                      tags$li(style = "size:16px; font-weight:bold;", 
-                          "Criteria Pollutant(s)")
-                  ),
-                  div(style = "height:100%; width:600px;",
-                      p(style = "size:14px;", 
-                          "Under the Clean Air Act, the EPA regulates air quality standards for six common air pollutants known as criteria air pollutants. These include ozone, carbon monoxide,
-                          sulfur dioxide, nitrogen dioxide, lead, and particulate matter. Each of these pollutants can be formed and released from combustion of electricity generation resources, 
-                          such as coal, natural gas, and biomass materials. EPA regulations affect how utilities are able to operate these generation facilities.")
-                  )
-              )}  # Criteria Pollutants
+              )}  # Transmission and Distribution
           )
         )}, # Energy Storage Glossary
         {hidden(
@@ -3346,57 +3487,34 @@ shinyUI(fluidPage(
                     {conditionalPanel(condition = "input.UseCase_res == 'RTU'",
                         tableOutput("BillComp.rtu"),
                         hr(),
-                        div(class = "row", style = "height:470px; padding: 0 25px;",
+                        div(class = "row", style = "height:325px; padding: 0 25px;",
                             
-                            {div(class = "financeCard", style = "height: 470px; margin: 0 15px 0 20px;",
+                            {div(class = "financeCard", style = "height: 320px; margin: 0 15px 0 20px;",
                                 p(class = "section-subheader center",
                                     "Battery Storage System Financial Data"),
-                                             
                                 div(class = "financeBox",
                                     htmlOutput(class = "center bold", "YearlySavings.rtu")),
                                 p("Potential Yearly Savings:"),
-                                             
+                                div(style = "height: 5px;"),
                                 div(class = "financeBox",
                                     htmlOutput(class = "center bold", "batteryCost.rtu")),
                                 p("Total Upfront Cost:"),
+                                div(style = "height: 2px;"),
                                 sliderInput(inputId = "BattCost.rtu",
                                             label = NULL,
                                             min = 2000, max = 10000,
                                             value = 6000, step = 1000,
                                             width = "100%", pre = "$"),
-                                             
+                                div(style = "height: 5px;"),
                                 div(class = "financeBox",
                                     htmlOutput(class = "center bold", "expLife.rtu")),
                                 p("Expected Useful Life:"),
+                                div(style = "height: 2px;"),
                                 sliderInput(inputId = "BattLife.rtu",
                                             label = NULL,
                                             min = 5, max = 25,
                                             value = 20, step = 5,
-                                            width = "100%", post = " years"),
-                                
-                                hr(class = "darkGreyLine"),
-                                             
-                                p(class = "center", 
-                                    "Employ a discount rate for savings calculations?"),
-                                div(class = "row discRateSwitch",
-                                    p("No"),
-                                    div(style = "margin:0 10px;",
-                                        tags$label(class = "switch",
-                                            tags$input(type = "checkbox", id = "toggle-rtu"),
-                                            tags$span(class = "slider round")
-                                        )
-                                    ),
-                                    p("Yes")
-                                ),
-                                             
-                                div(class = "financeBox",
-                                    htmlOutput(class = "center bold", outputId = "discountRate.rtu")),
-                                p("Discount Rate:"),
-                                    sliderInput(inputId = "discRate.rtu",
-                                                label = NULL,
-                                                min = 0, max = 10,
-                                                value = 0, step = 0.5,
-                                                width = "100%", post = "%")
+                                            width = "100%", post = " years")
                                              
                             )}, # Financial Data and Slider Box
                             {div(class = "billCompText", style = "padding: 0 5px;",
@@ -3404,16 +3522,12 @@ shinyUI(fluidPage(
                                     "Evaluating the Effects of Battery Energy Storage"),
                                 p(class = "indent",
                                     "The table above compares the monthly and yearly bills for a sample residential customer with and without energy storage, using both standard,
-                                    flat-rate pricing and time-of-use rate design. The two most significant columns to compare are shaded in grey, comparing a standard bill without
-                                    energy storage and a time-of-use bill with energy storage. This represents the potential savings of a storage device engaged in time-of-use rate
-                                    management. It should be noted that the total energy consumption in kilowatt-hours (two far-right columns) is greater when a storage device is used
-                                    because of round-trip inefficiency."
-                                ),
+                                    flat-rate pricing and time-of-use rate design. The two most significant columns to compare are shaded in grey: a standard bill without
+                                    energy storage and a time-of-use bill with energy storage."),
                                 p(class = "indent",
-                                    "The top line in the box to the left shows the estimated yearly savings calculated from the table above. When taken alongside the upfront cost and
-                                    the expected useful life of the battery, it is possible to estimate if and when the energy savings can offset the cost and create positive net value.
-                                    This is shown graphically below, with green or red vertical bars representing lifetime net savings or cost."
-                                )
+                                   "Using the difference between these two values, the estimated yearly savings, the upfront cost of the battery, and
+                                    its expected useful life, it is possible to estimate if and when the energy savings can offset the cost and create positive net value.
+                                    This is shown graphically below, with green or red vertical bars representing lifetime net savings or cost.")
                             )}  # Text Description Box
                         ),
                         hr(),
@@ -3493,9 +3607,9 @@ shinyUI(fluidPage(
                             
                         )}, # Second Row - Rate Selection and Table Caption
                         hr(),
-                        {div(class = "row", style = "height:490px; padding: 0 25px;",
+                        {div(class = "row", style = "height:335px; padding: 0 25px;",
                             
-                            {div(class = "financeCard", style = "height: 490px; margin: 0 15px 0 20px;",
+                            {div(class = "financeCard", style = "height: 330px; margin: 0 15px 0 20px;",
                                 p(class = "section-subheader center",
                                     "Battery Storage System Financial Data"),
                                 
@@ -3531,45 +3645,18 @@ shinyUI(fluidPage(
                                             label = NULL,
                                             min = 5, max = 25,
                                             value = 20, step = 5,
-                                            width = "100%", post = " years"),
-                                hr(class = "darkGreyLine"),
-                                
-                                p(class = "center", 
-                                    "Employ a discount rate for savings calculations?"),
-                                div(class = "row discRateSwitch",
-                                    p("No"),
-                                    div(style = "margin:0 10px;",
-                                        tags$label(class = "switch",
-                                            tags$input(type = "checkbox", id = "toggle-rsf"),
-                                            tags$span(class = "slider round"))),
-                                    p("Yes")
-                                ),
-                                
-                                div(class = "financeBox",
-                                    htmlOutput(class = "center bold", outputId = "discountRate.rsf")),
-                                p("Discount Rate:"),
-                                sliderInput(inputId = "discRate.rsf",
-                                            label = NULL,
-                                            min = 0, max = 10,
-                                            value = 0, step = 0.5,
-                                            width = "100%", post = "%")
-                                
+                                            width = "100%", post = " years")
+                            
                             )}, # Financial Data and Slider Box
                             {div(class = "billCompText", style = "padding: 0 5px;",
                                  p(class = "section-subheader",
                                    "Evaluating the Effects of Battery Energy Storage"),
                                  p(class = "indent",
-                                   "The table above compares the monthly and yearly bills for a sample residential customer without any solar or storage, with roof-top solar,
-                                    and with solar and storage. The standard bill in the far left column is calculated with traditional flat-rate pricing. Each of the solar and
-                                   solar plus storage examples report the amount of energy overgenerated from the solar panels and returned to the grid through net metering, the electricity
+                                   "The table above compares the electric bills for a sample residential customer without solar or storage, with roof-top solar,
+                                   and with solar and storage. The standard bill in the far left column is calculated with traditional flat-rate pricing. Each of the solar and
+                                   solar-plus-storage examples report the amount of energy overgenerated from the solar panels and returned to the grid through net metering, the electricity
                                    bill if returned electricity is compensated at the full retail rate, and the bill if returned electricity is compensated below the retail rate. The 'Net Metering
-                                    Compensation Rate' figure below the table shows the retail and net-metered prices for electricity throughout the year and allows you to adjust the compensation rate."
-                                 ),
-                                 p(class = "indent",
-                                   "The top line in the box to the left shows the estimated yearly savings calculated from the table above. When taken alongside the upfront cost and
-                                   the expected useful life of the battery, it is possible to estimate if and when the energy savings can offset the cost and create positive net value.
-                                   This is shown graphically below, with green or red vertical bars representing lifetime net savings or cost."
-                                 )
+                                   Compensation Rate' figure below the table shows the retail and net-metered prices for electricity throughout the year and allows you to adjust the compensation rate.")
                             )}  # Text Description Box
                             
                         )}, # Third Row - Financial Data and Text Card
@@ -4197,57 +4284,35 @@ shinyUI(fluidPage(
                             tableOutput("BillComp.ctu"),
                             
                             hr(),
-                            div(class = "row", style = "height:470px; padding: 0 25px;",
+                            div(class = "row", style = "height:355px; padding: 0 25px;",
                                 
-                                {div(class = "financeCard", style = "height:470px; margin: 0 15px 0 20px;",
+                                {div(class = "financeCard", style = "height:355px; margin: 0 15px 0 20px;",
                                      p(class = "section-subheader center",
                                        "Battery Storage System Financial Data"),
                                      
                                      div(class = "financeBox",
                                          htmlOutput(class = "center bold", "YearlySavings.ctu")),
                                      p("Potential Yearly Savings:"),
-                                     
+                                     div(style = "height: 5px;"),
                                      div(class = "financeBox",
                                          htmlOutput(class = "center bold", "batteryCost.ctu")),
                                      p("Total Upfront Cost:"),
+                                     div(style = "height: 5px;"),
                                      sliderInput(inputId = "BattCost.ctu",
                                                  label = NULL,
                                                  min = 20000, max = 200000,
                                                  value = 50000, step = 5000,
                                                  width = "100%", pre = "$"),
-                                     
+                                     div(style = "height: 5px;"),
                                      div(class = "financeBox",
                                          htmlOutput(class = "center bold", "expLife.ctu")),
                                      p("Expected Useful Life:"),
+                                     div(style = "height: 5px;"),
                                      sliderInput(inputId = "BattLife.ctu",
                                                  label = NULL,
                                                  min = 5, max = 25,
                                                  value = 20, step = 5,
-                                                 width = "100%", post = " years"),
-                                     
-                                     hr(class = "darkGreyLine"),
-                                     
-                                     p(class = "center", 
-                                       "Employ a discount rate for savings calculations?"),
-                                     div(class = "row discRateSwitch",
-                                         p("No"),
-                                         div(style = "margin:0 10px;",
-                                             tags$label(class = "switch",
-                                                        tags$input(type = "checkbox", id = "toggle-ctu"),
-                                                        tags$span(class = "slider round")
-                                             )
-                                         ),
-                                         p("Yes")
-                                     ),
-                                     
-                                     div(class = "financeBox",
-                                         htmlOutput(class = "center bold", outputId = "discountRate.ctu")),
-                                     p("Discount Rate:"),
-                                     sliderInput(inputId = "discRate.ctu",
-                                                 label = NULL,
-                                                 min = 0, max = 10,
-                                                 value = 0, step = 0.5,
-                                                 width = "100%", post = "%")
+                                                 width = "100%", post = " years")
                                      
                                 )}, # Financial Data and Slider Box
                                 {div(class = "billCompText", style = "padding: 0 5px;",
@@ -4257,11 +4322,10 @@ shinyUI(fluidPage(
                                        "The table above compares the monthly and yearly bills for a sample commercial customer with and without energy storage, using both flat-rate,
                                        non-demand-metered pricing and time-of-use rate design. The two most significant columns to compare are shaded in grey, comparing a standard bill without
                                        energy storage and a time-of-use bill with energy storage. This represents the potential savings of a storage device engaged in time-of-use rate
-                                       management. It should be noted that the total energy consumption in kilowatt-hours (two far-right columns) is greater when a storage device is used
-                                       because of round-trip inefficiency."
+                                       management."
                                      ),
                                      p(class = "indent",
-                                       "The top line in the box to the left shows the estimated yearly savings calculated from the table above. When taken alongside the upfront cost and
+                                       "Using the estimated yearly savings for this storage device, the upfront cost, and
                                        the expected useful life of the battery, it is possible to estimate if and when the energy savings can offset the cost and create positive net value.
                                        This is shown graphically below, with green or red vertical bars representing lifetime net savings or cost."
                                      )
@@ -4334,75 +4398,51 @@ shinyUI(fluidPage(
                             )}, # Middle Row - Rate Sliders and Caption
                             
                             hr(),
-                            div(class = "row", style = "height:470px; padding: 0 25px;",
-                                {div(class = "financeCard", style = "height:470px; margin: 0 15px 0 20px;",
+                            div(class = "row", style = "height:350px; padding: 0 25px;",
+                                {div(class = "financeCard", style = "height:350px; margin: 0 15px 0 20px;",
                                      p(class = "section-subheader center",
                                        "Battery Storage System Financial Data"),
                                      
                                      div(class = "financeBox",
                                          htmlOutput(class = "center bold", "YearlySavings.cps")),
                                      p("Potential Yearly Savings:"),
-                                     
+                                     div(style = "height: 5px;"),
                                      div(class = "financeBox",
                                          htmlOutput(class = "center bold", "batteryCost.cps")),
                                      p("Total Upfront Cost:"),
+                                     div(style = "height: 5px;"),
                                      sliderInput(inputId = "BattCost.cps",
                                                  label = NULL,
                                                  min = 20000, max = 200000,
                                                  value = 50000, step = 5000,
                                                  width = "100%", pre = "$"),
-                                     
+                                     div(style = "height: 5px;"),
                                      div(class = "financeBox",
                                          htmlOutput(class = "center bold", "expLife.cps")),
                                      p("Expected Useful Life:"),
+                                     div(style = "height: 5px;"),
                                      sliderInput(inputId = "BattLife.cps",
                                                  label = NULL,
                                                  min = 5, max = 25,
                                                  value = 20, step = 5,
-                                                 width = "100%", post = " years"),
-                                     
-                                     hr(class = "darkGreyLine"),
-                                     
-                                     p(class = "center", 
-                                       "Employ a discount rate for savings calculations?"),
-                                     div(class = "row discRateSwitch",
-                                         p("No"),
-                                         div(style = "margin:0 10px;",
-                                             tags$label(class = "switch",
-                                                        tags$input(type = "checkbox", id = "toggle-cps"),
-                                                        tags$span(class = "slider round")
-                                             )
-                                         ),
-                                         p("Yes")
-                                     ),
-                                     
-                                     div(class = "financeBox",
-                                         htmlOutput(class = "center bold", outputId = "discountRate.cps")),
-                                     p("Discount Rate:"),
-                                     sliderInput(inputId = "discRate.cps",
-                                                 label = NULL,
-                                                 min = 0, max = 10,
-                                                 value = 0, step = 0.5,
-                                                 width = "100%", post = "%")
-                                     
+                                                 width = "100%", post = " years")
                                 )}, # Financial Data and Slider Box
                                 {div(class = "billCompText", style = "padding: 0 5px;",
                                     p(class = "section-subheader",
                                         "Evaluating the Effects of Battery Energy Storage"),
                                     p(class = "indent",
-                                        "The table above depicts the monthly and yearly bills for a sample commercial or industrial utility customer. The far left column calculates the electricity bill
-                                        if they were charged on a flat-rate per-kilowatt-hour structure. The 'No Battery' and 'With Battery' sections show bill components for demand-metered
-                                        rates with and without a battery performing demand-charge management to reduce peak load events. Each of these sections have 'kWh Charge' and 'Demand Charge' sections
-                                        which show the two components that are added together to comprise the total bill, shaded in grey. Note that the kWh charges are greater when a battery is
-                                        used because of the increase in total energy use, but the demand charge is reduced by a sizeable amount. Usage and demand charge rates can be adjusted by the sliders
+                                        "The table above shows sample bills for a commercial utility customer. The far left column calculates the electric bill
+                                        using a flat-rate per-kilowatt-hour structure. The 'No Battery' and 'With Battery' sections show bill components for demand-metered
+                                        rates with and without demand-charge management to reduce peak load events. Each section 'kWh Charge' and 'Demand Charge' columns
+                                        which show the two components that are added together to get the total bill, shaded in grey. Rates can be adjusted using the sliders
                                         below the table."
                                     ),
                                     p(class = "indent",
-                                        "Using the data generated in the able above and additional information provided to the left, it is possible to estimate the total net cost or savings for the lifetime
-                                        of the storage device. This information is presented in the break-even analysis figure below."
+                                        "Using the data generated in the table above and additional information provided to the left, it is possible to estimate the total net cost or savings for the lifetime
+                                        of the storage device (Shown below)."
                                     )
-                                )}
-                            ),  # Text Description Box
+                                )}  # Text Description Box
+                            ),  
                             
                             hr(),
                             p(class = "column-header", "Break-Even Analysis of Demand-Charge Management Use Case"),
@@ -4507,9 +4547,9 @@ shinyUI(fluidPage(
                                 )}  # Table Caption
                             )}, # Second Row - Rate Selection and Caption
                             hr(),
-                            {div(class = "row", style = "height:490px; padding: 0 25px;",
+                            {div(class = "row", style = "height:350px; padding: 0 25px;",
                                  
-                                 {div(class = "financeCard", style = "height: 490px; margin: 0 15px 0 20px;",
+                                 {div(class = "financeCard", style = "height: 350px; margin: 0 15px 0 20px;",
                                       p(class = "section-subheader center",
                                         "Battery Storage System Financial Data"),
                                       
@@ -4534,8 +4574,8 @@ shinyUI(fluidPage(
                                       p("Total Upfront Cost:"),
                                       sliderInput(inputId = "BattCost.csf",
                                                   label = NULL,
-                                                  min = 20000, max = 200000,
-                                                  value = 50000, step = 5000,
+                                                  min = 50000, max = 400000,
+                                                  value = 150000, step = 10000,
                                                   width = "100%", pre = "$"),
                                       
                                       div(class = "financeBox",
@@ -4545,44 +4585,18 @@ shinyUI(fluidPage(
                                                   label = NULL,
                                                   min = 5, max = 25,
                                                   value = 20, step = 5,
-                                                  width = "100%", post = " years"),
-                                      hr(class = "darkGreyLine"),
-                                      
-                                      p(class = "center", 
-                                        "Employ a discount rate for savings calculations?"),
-                                      div(class = "row discRateSwitch",
-                                          p("No"),
-                                          div(style = "margin:0 10px;",
-                                              tags$label(class = "switch",
-                                                         tags$input(type = "checkbox", id = "toggle-csf"),
-                                                         tags$span(class = "slider round"))),
-                                          p("Yes")
-                                      ),
-                                      
-                                      div(class = "financeBox",
-                                          htmlOutput(class = "center bold", outputId = "discountRate.csf")),
-                                      p("Discount Rate:"),
-                                      sliderInput(inputId = "discRate.csf",
-                                                  label = NULL,
-                                                  min = 0, max = 10,
-                                                  value = 0, step = 0.5,
-                                                  width = "100%", post = "%")
+                                                  width = "100%", post = " years")
                                       
                                  )}, # Financial Data and Slider Box
                                  {div(class = "billCompText", style = "padding: 0 5px;",
                                       p(class = "section-subheader",
                                         "Evaluating the Effects of Battery Energy Storage"),
                                       p(class = "indent",
-                                        "The table above compares the monthly and yearly bills for a sample commercial or industrial customer without any solar or storage, with on-site solar,
+                                        "The table above compares the monthly and yearly bills for a sample commercial customer without any solar or storage, with on-site solar,
                                         and with solar and storage. The standard bill in the far left column is calculated with traditional flat-rate pricing. Each of the solar and
                                         solar plus storage examples report the amount of energy over-generated from the solar panels and returned to the grid through net metering, the electricity
                                         bill if returned electricity is compensated at the full retail rate, and the bill if returned electricity is compensated below the retail rate. The 'Net Metering
                                         Compensation Rate' figure below the table shows the retail and net-metered prices for electricity throughout the year and allows you to adjust the compensation rate."
-                                      ),
-                                      p(class = "indent",
-                                        "Notice that using a demand-metered rate structure (under 'Billing Format') significantly reduces the savings of the storage device. Organizations with demand-metered 
-                                        rates should employ a battery control system that takes this into account when designing device behavior. This underscores the importance of using the right use case 
-                                        to get the maximum value from a storage device."
                                       )
                                       )}  # Text Description Box
                                  

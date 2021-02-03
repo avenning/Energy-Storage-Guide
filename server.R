@@ -482,7 +482,7 @@ shinyServer(function(input, output, session) {
       expLife <- input$BattLife.rtu
       yearlySavings <- yearlySavings.rtu()
       payBack <- (-upfrontCost)/yearlySavings
-      profitLoss = upfrontCost + expLife * yearlySavings
+      profitLoss <- upfrontCost + expLife * yearlySavings
     
     ggplot(data = tibble(a = c(1))) +
       geom_hline(yintercept = 0) +
@@ -2569,7 +2569,7 @@ shinyServer(function(input, output, session) {
       
       geom_label(aes(x = 0.5, y = upfrontCost-2000), hjust = 0, label = "Initial Investment/\nUpfront Cost", 
                  fontface = "bold", size = 4.5, label.size = NA, alpha = 0.5) +
-      geom_text(aes(x = .8, y = ifelse(profitLoss < -4000 | (profitLoss >= 0 & profitLoss < 4100), profitLoss + 2500, profitLoss - 2500)),
+      geom_text(aes(x = .8, y = ifelse(profitLoss < -4000 | (profitLoss >= 0 & profitLoss < 4100), profitLoss + 10000, profitLoss - 5000)),
                 hjust = 0, label = "Total Expected Lifetime Savings", fontface = "bold", size = 5) +
       geom_label(aes(x = ifelse(payBack <= 22.5 | payBack > 25.1, payBack + 1.45, payBack - 1.45), y = 0), 
                  label = "Break Even\nPoint", vjust = ifelse(payBack <= 22.5 | payBack > 25.1, 1.05, -0.05),
@@ -2592,7 +2592,7 @@ shinyServer(function(input, output, session) {
                          labels = c("5 yrs", "10 yrs", "15 yrs", "20 yrs", "25 yrs", "30 yrs"),
                          expand = c(0,0)) +
       scale_y_continuous(name = "Cost (Dollars)",
-                         breaks = seq.int(from = -500000, to = 500000, by = 10000)) +
+                         breaks = seq.int(from = -500000, to = 500000, by = 20000)) +
       
       theme(axis.title = element_blank(),
             axis.text = element_text(size = 12),
