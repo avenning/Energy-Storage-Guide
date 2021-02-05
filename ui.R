@@ -81,7 +81,7 @@ shinyUI(fluidPage(
                     Partners in Minneapolis, and the University of Minnesota, Morris.")
             ),
             br(),
-            img(src = "Logos.png", width = "500px", style = "margin-left:225px;"),
+            img(src = "Logos2.png", width = "500px", style = "margin-left:225px;"),
             {div(style = "min-width: 950px; max-width: 950px; height: 210px; background-color: #d6dce5; border-radius: 10px; margin-top: 25px; padding:5px;",
                 p(class = "section-subheader",
                     "How to Use this Guide:"),
