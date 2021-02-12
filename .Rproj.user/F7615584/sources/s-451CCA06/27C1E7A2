@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1612547925193.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1721828779",
+    "id" : "27C1E7A2",
+    "lastKnownWriteTime" : 1612492295,
+    "last_content_update" : 1612492295,
+    "path" : "~/Desktop/Community_Energy_Storage_Guide/Energy-Storage-Guide/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
